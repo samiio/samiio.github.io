@@ -61,10 +61,6 @@ const domController = (() => {
       content.removeChild(content.firstChild);
   }
 
-  /**
-  * @param {String} url - address for the HTML to fetch
-  * @return {String} the resulting HTML string fragment
-  */
   const fetchHtmlAsText = async (url) => {
     return await (await fetch(url)).text();
   }
@@ -80,7 +76,7 @@ const domController = (() => {
       'projects.html'
     ];
     loadPage(`./views/${views[id]}`);
-    events.on('pageLoaded', id);
+    // events.emit('pageLoaded', id);
   }
 
   const content = document.querySelector('.content');
@@ -88,3 +84,23 @@ const domController = (() => {
   events.on('navClicked', clearContent);
   events.on('navClicked', setView);
 })();
+
+// const homeView = (() => {
+//   const init = (id) => {
+//     if (id == 0) {
+//       setButtons();
+//     }
+//   }
+
+//   const setButtons = () => {
+//     const about = document.querySelector('.btn__about');
+//     const proj  = document.querySelector('.btn__proj');
+
+//     about.addEventListener('click', () => {
+//       events.emit('navClicked', 1);
+//     });
+//   }
+
+//   events.on('pageLoaded', init);
+//   init(0);
+// })();

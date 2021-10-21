@@ -23,8 +23,6 @@ body {
 .navbar {
   z-index: 99;
   background-color: var(--dark-gray);
-  position: fixed;
-  bottom: 0;
 }
 
 .nav-link, .nav-link:focus, .navbar-brand {
@@ -151,7 +149,6 @@ a {
 }
 
 /* Card */
-
 .card {
   background-color: var(--gray-bs);
   padding: 0px !important;
@@ -210,9 +207,6 @@ a {
     letter-spacing: 4px;
   }
 
-  .navbar {
-    position: relative
-  }
 }
  
 /* Medium devices (landscape tablets, 768px and up) */
