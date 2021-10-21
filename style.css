@@ -23,6 +23,8 @@ body {
 .navbar {
   z-index: 99;
   background-color: var(--dark-gray);
+  position: fixed;
+  bottom: 0;
 }
 
 .nav-link, .nav-link:focus, .navbar-brand {
@@ -206,6 +208,10 @@ a {
 
   .nav-link {
     letter-spacing: 4px;
+  }
+
+  .navbar {
+    position: relative
   }
 }
  
