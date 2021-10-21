@@ -1,0 +1,246 @@
+:root {
+  --green: #03A062;
+  --red: #e44e58;
+  --dark-red: #e43956c4;
+  --blue: #0077b5;
+  --blue-v2: #0a66c2;
+  --blue-v2-d: #08519b;
+  --gray: rgb(170, 170, 170);
+  --gray-bs: rgb(33, 37, 41);
+  --dark-gray: #181a1b;
+  --dark-blue: #002333;
+  --text-color: #fff;
+  --lighter-text: rgb(219, 219, 219);
+  --card-background: #2e3031;
+  --skills-span: rgb(200, 200, 200);
+}
+
+body {
+  background-color: var(--dark-gray);
+}
+
+/* Nav */
+.navbar {
+  z-index: 99;
+  background-color: var(--dark-gray);
+}
+
+.nav-link, .nav-link:focus, .navbar-brand {
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.navbar-brand {
+  margin-left: 3rem;
+  letter-spacing: 6px;
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+.last-name {
+  color: var(--blue);
+}
+
+.marker {
+  position: absolute;
+  height: 4px;
+  width: 0;
+  background: var(--blue);
+  bottom: -2px;
+  left: 0;
+  transition: 0.1s;
+  border-radius: 4px;
+}
+
+.material-icons {
+  color: var(--text-color);
+}
+
+/* general */
+
+.custom__content {
+  margin: 1rem 0;
+}
+
+h1 {
+  color: var(--blue);
+}
+
+h2, h3, h4, h5, p {
+  color: var(--bs-gray-500);
+  
+}
+
+.mb__10 {
+  margin-bottom: 5rem;
+}
+
+.green__clr {
+  color: var(--green);
+}
+
+.large-font {
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+
+.mt__30 {
+  margin-top: 10rem;
+}
+
+.btn {
+  /* text-transform: uppercase; */
+  border-radius: 50px;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-primary, .btn-primary:focus {
+  background-color: var(--blue-v2);
+  border: var(--blue-v2);
+}
+
+.btn-primary:hover {
+  background-color: var(--blue-v2-d);
+}
+
+.btn-secondary:focus {
+  background-color: #6c757d;
+}
+
+.fw__600 {
+  font-weight: 600;
+}
+
+/* fa icons */
+.fab {
+  font-size: 3rem;
+}
+
+.fa-linkedin {
+  color: #0077b5;
+}
+
+.fa-github-square {
+  color: var(--gray);
+}
+
+a {
+  text-decoration: none;
+}
+
+.mt__mobile {
+  margin-top: 1.5rem;
+}
+
+.img__logo {
+  height: 1rem;
+  width: auto;
+  margin-left: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Card */
+
+.card {
+  background-color: var(--gray-bs);
+  padding: 0px !important;
+}
+
+.card-text {
+  margin-bottom: 0rem;
+}
+
+.project {
+  width: 18rem;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 4rem;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .body__height {
+    margin: 0;
+  }
+
+  .material-icons {
+    display: none;
+  }
+
+  .nav-link {
+    letter-spacing: 4px;
+  }
+}
+ 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container-fluid {
+    padding-right: var(--bs-gutter-x,1.5rem);
+    padding-left: var(--bs-gutter-x,1.5rem);
+  }
+}
+ 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container-fluid {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .margin__large {
+    height: 3rem;
+  }
+
+  .mt__mobile {
+    margin-top: 0rem;
+  }
+}
+ 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container-fluid {
+    width: 1000px;
+  }
+
+  .card {
+    margin: 0 4px;
+  }
+
+} 
