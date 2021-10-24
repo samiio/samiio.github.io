@@ -26,7 +26,6 @@ body {
 }
 
 .nav-link, .nav-link:focus, .navbar-brand {
-  text-transform: uppercase;
   color: var(--text-color);
 }
 
@@ -96,7 +95,6 @@ h2, h3, h4, h5, p {
 }
 
 .btn {
-  /* text-transform: uppercase; */
   border-radius: 50px;
   letter-spacing: 2px;
   font-size: 0.9rem;
@@ -195,6 +193,10 @@ a {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .nav-link {
+    text-transform: uppercase;
+  }
+
   .body__height {
     margin: 0;
   }

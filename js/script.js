@@ -26,30 +26,18 @@ var events = {
 
 const navbarView = (() => {
 
-  // TOOD: indicator on mobile
-  const indicator = (e) => {
-    const marker = navbar.querySelector('.marker');
-    if (navbar.offsetWidth < 600) {
-      marker.style.left  = `${e.target.offsetLeft + 10}px`;
-      marker.style.width = `${e.target.offsetWidth - 20}px`;
-    } else {
-      marker.style.display = 'none';
-    }
-  }
-
   const emitId = (e) => {
     events.emit('navClicked', e.target.parentNode.dataset.id);
   }
 
   const navItemsClick = () => {
+    const navbar = document.querySelector('nav');
     const navItems = navbar.querySelectorAll('.nav-item');
     navItems.forEach((item) => {
       item.addEventListener('click', emitId);
-      item.addEventListener('click', indicator);
     });
   }
 
-  const navbar = document.querySelector('nav');
   navItemsClick();
 })();
 
@@ -76,7 +64,6 @@ const domController = (() => {
       'projects.html'
     ];
     loadPage(`./views/${views[id]}`);
-    // events.emit('pageLoaded', id);
   }
 
   const content = document.querySelector('.content');
@@ -85,22 +72,17 @@ const domController = (() => {
   events.on('navClicked', setView);
 })();
 
-// const homeView = (() => {
-//   const init = (id) => {
-//     if (id == 0) {
-//       setButtons();
-//     }
-//   }
+const homeView = (() => {
+  const aboutClick = () => {
+    events.emit('navClicked', 1);
+  }
 
-//   const setButtons = () => {
-//     const about = document.querySelector('.btn__about');
-//     const proj  = document.querySelector('.btn__proj');
+  const projectsClick = () => {
+    events.emit('navClicked', 2);
+  }
 
-//     about.addEventListener('click', () => {
-//       events.emit('navClicked', 1);
-//     });
-//   }
-
-//   events.on('pageLoaded', init);
-//   init(0);
-// })();
+  return { 
+    aboutClick,
+    projectsClick
+  };
+})();
